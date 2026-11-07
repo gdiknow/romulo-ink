@@ -462,6 +462,17 @@ header.top { border:0; border-radius:0; background:transparent; }
   .cinema-card:nth-child(4) { transform:rotateY(-13deg) translateZ(-18px) scale(.97); }
   .cinema-card:nth-child(5) { transform:rotateY(-25deg) translateZ(-44px) scale(.92); }
 }
+/* Filtros do portfólio mais fáceis de tocar e sem uma faixa apertada no celular. */
+.chips { width:fit-content; max-width:100%; flex-wrap:wrap; overflow:visible; gap:10px; margin:16px auto 0; padding:12px; border:1px solid var(--line); border-radius:16px; background:rgba(240,238,232,.035); }
+.chip { min-height:42px; padding:8px 15px; border-color:rgba(240,238,232,.2); }
+.chip.empty { opacity:.48; }
+@media(max-width:760px) {
+  .chips { position:static; width:100%; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin:14px 0 0; padding:0; border:0; border-radius:0; background:transparent; }
+  .chip { width:100%; min-width:0; min-height:46px; justify-content:space-between; gap:8px; padding:10px 12px; border-radius:12px; font-size:14px; }
+  .chip .mono { font-size:10px; }
+  .chip.on { background:#e8e2d7; color:#111; border-color:#e8e2d7; }
+  .chip.empty { opacity:.52; }
+}
 
 </style>
 </head>
